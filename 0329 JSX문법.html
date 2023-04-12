@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" href="./css/JSX.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        // 함수형태로 컴포넌트 작성
+        function MyApp(){
+            const name = 'react';
+            const Array = ["R","E","A","C","T"];
+            // return을 통해 화면에 출력되는 html 작성
+            return (
+                <div>
+                    <h1>안녕</h1>
+                    <h1>처음만나는 {name}</h1>
+                    <p>부모요소는 하나만</p>
+                    <p>{Array}</p>
+                </div>
+            );
+        }
+
+        // html에서 가상돔을 출력할 공간을 가져와서 연결
+        const container = document.querySelector("#root");
+        const root = ReactDOM.createRoot(container);
+        // 원하는 html코드를 화면에 출력
+        // html코드를 가진 컴포넌트를 출력
+        // <컴포넌트명/> => 태그처럼 불러와서 사용
+        // 
+        root.render(<MyApp/>);
+
+    </script>
+</body>
+</html>

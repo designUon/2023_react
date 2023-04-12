@@ -1,0 +1,8 @@
+ul{
+    list-style: none;
+}
+
+.checked{
+    color: lightgray;
+    text-decoration: line-through;
+}
